@@ -1,0 +1,588 @@
+{
+	"info": {
+		"_postman_id": "35ac9e63-08d1-4777-b8ba-38e36af3d3cf",
+		"name": "Disney",
+		"description": "API DISNEY",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Personaje",
+			"item": [
+				{
+					"name": "Información Básica",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGJhcmV6bHVjYXM5OUBnbWFpbC5jb20iLCJleHAiOjE2MzE3NDk3NzIsImlhdCI6MTYzMTcxMzc3Mn0.EKsz64SHJcv9IHLykfW7cB0S9J-5wImcnq4xmsBhKV0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/personaje",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"personaje"
+							]
+						},
+						"description": "Servicio para visualizar información básica sobre los personajes"
+					},
+					"response": []
+				},
+				{
+					"name": "Información Completa",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGJhcmV6bHVjYXM5OUBnbWFpbC5jb20iLCJleHAiOjE2MzE3NDk3NzIsImlhdCI6MTYzMTcxMzc3Mn0.EKsz64SHJcv9IHLykfW7cB0S9J-5wImcnq4xmsBhKV0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/personaje/detalles",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"personaje",
+								"detalles"
+							]
+						},
+						"description": "Servicio para visualizar la información completa de los personajes"
+					},
+					"response": []
+				},
+				{
+					"name": "Nuevo Personaje",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGJhcmV6bHVjYXM5OUBnbWFpbC5jb20iLCJleHAiOjE2MzE3NDk3NzIsImlhdCI6MTYzMTcxMzc3Mn0.EKsz64SHJcv9IHLykfW7cB0S9J-5wImcnq4xmsBhKV0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"Roja\",\r\n    \"imagen\":\"desktop/Roja.png\",\r\n    \"edad\":23,\r\n    \"peso\":62,\r\n    \"historia\":\"personaje de ficcion\",\r\n    \"idPeliculaSerie\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/personaje",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"personaje"
+							]
+						},
+						"description": "Servicio para agregar nuevos personajes"
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar Personaje",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGJhcmV6bHVjYXM5OUBnbWFpbC5jb20iLCJleHAiOjE2MzE3NDk3NzIsImlhdCI6MTYzMTcxMzc3Mn0.EKsz64SHJcv9IHLykfW7cB0S9J-5wImcnq4xmsBhKV0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/personaje/27",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"personaje",
+								"27"
+							]
+						},
+						"description": "Servicio para eliminar un personaje"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Personaje",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGJhcmV6bHVjYXM5OUBnbWFpbC5jb20iLCJleHAiOjE2MzE3NDk3NzIsImlhdCI6MTYzMTcxMzc3Mn0.EKsz64SHJcv9IHLykfW7cB0S9J-5wImcnq4xmsBhKV0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"ricardo\",\r\n    \"imagen\":\"desktop/ricardo.png\",\r\n    \"edad\":18,\r\n    \"peso\":51,\r\n    \"idPeliculaSerie\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/personaje/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"personaje",
+								"4"
+							]
+						},
+						"description": "Servicio para actualizar cualquier aspecto del personaje"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pelicula-Serie",
+			"item": [
+				{
+					"name": "Informacion Basica",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGJhcmV6bHVjYXM5OUBnbWFpbC5jb20iLCJleHAiOjE2MzE3NDk3NzIsImlhdCI6MTYzMTcxMzc3Mn0.EKsz64SHJcv9IHLykfW7cB0S9J-5wImcnq4xmsBhKV0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/pelicula-serie",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pelicula-serie"
+							]
+						},
+						"description": "Servicio para visualizar la información básica de las peliculas"
+					},
+					"response": []
+				},
+				{
+					"name": "Información Completa",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGJhcmV6bHVjYXM5OUBnbWFpbC5jb20iLCJleHAiOjE2MzE3NDk3NzIsImlhdCI6MTYzMTcxMzc3Mn0.EKsz64SHJcv9IHLykfW7cB0S9J-5wImcnq4xmsBhKV0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/pelicula-serie/detalles",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pelicula-serie",
+								"detalles"
+							]
+						},
+						"description": "Servicio para visualizar la información completa de las peliculas"
+					},
+					"response": []
+				},
+				{
+					"name": "Nueva Pelicula",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGJhcmV6bHVjYXM5OUBnbWFpbC5jb20iLCJleHAiOjE2MzE3NDk3NzIsImlhdCI6MTYzMTcxMzc3Mn0.EKsz64SHJcv9IHLykfW7cB0S9J-5wImcnq4xmsBhKV0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n         \"imagen\": \"/desktop/minions.png\",\r\n        \"titulo\": \"Los minions\",\r\n        \"calificacion\": 9,\r\n        \"fechaCreacion\": \"25/12/1899\",\r\n        \"idPersonaje\":28,\r\n        \"idGeneros\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/pelicula-serie",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pelicula-serie"
+							]
+						},
+						"description": "Servicio para agregar una nueva película"
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar Pelicula",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGJhcmV6bHVjYXM5OUBnbWFpbC5jb20iLCJleHAiOjE2MzE3NDk3NzIsImlhdCI6MTYzMTcxMzc3Mn0.EKsz64SHJcv9IHLykfW7cB0S9J-5wImcnq4xmsBhKV0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/pelicula-serie/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pelicula-serie",
+								"3"
+							]
+						},
+						"description": "Servicio para eliminar una película"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Pelicula",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGJhcmV6bHVjYXM5OUBnbWFpbC5jb20iLCJleHAiOjE2MzE3NDk3NzIsImlhdCI6MTYzMTcxMzc3Mn0.EKsz64SHJcv9IHLykfW7cB0S9J-5wImcnq4xmsBhKV0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"imagen\": \"/desktop/golemns.png\",\r\n        \"titulo\": \"Golemns\",\r\n        \"calificacion\": 9,\r\n        \"fechaCreacion\": \"25/12/1839\",\r\n        \"idPersonaje\":28\r\n       \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/pelicula-serie/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pelicula-serie",
+								"1"
+							]
+						},
+						"description": "Servicio para actualizar cualquier aspecto de las películas"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Genero",
+			"item": [
+				{
+					"name": "Información",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGJhcmV6bHVjYXM5OUBnbWFpbC5jb20iLCJleHAiOjE2MzE3NDk3NzIsImlhdCI6MTYzMTcxMzc3Mn0.EKsz64SHJcv9IHLykfW7cB0S9J-5wImcnq4xmsBhKV0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/genero",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"genero"
+							]
+						},
+						"description": "Servicio para visualizar la información de los generos"
+					},
+					"response": []
+				},
+				{
+					"name": "Nuevo Genero",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGJhcmV6bHVjYXM5OUBnbWFpbC5jb20iLCJleHAiOjE2MzE3NDk3NzIsImlhdCI6MTYzMTcxMzc3Mn0.EKsz64SHJcv9IHLykfW7cB0S9J-5wImcnq4xmsBhKV0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nombre\": \"Comedia\",\r\n        \"imagen\": \"/desktop/Comedia.png\",\r\n        \"idPeliculaSerie\": 2\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/genero",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"genero"
+							]
+						},
+						"description": "Servicio para agregar un nuevo genero"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Genero",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGJhcmV6bHVjYXM5OUBnbWFpbC5jb20iLCJleHAiOjE2MzE3NDk3NzIsImlhdCI6MTYzMTcxMzc3Mn0.EKsz64SHJcv9IHLykfW7cB0S9J-5wImcnq4xmsBhKV0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nombre\": \"Romance\",\r\n        \"imagen\": \"/desktop/Romance.png\",\r\n        \"idPeliculaSerie\": 2\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/genero/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"genero",
+								"1"
+							]
+						},
+						"description": "Servicio para actualizar cualquier aspecto de los generos"
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar Genero",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGJhcmV6bHVjYXM5OUBnbWFpbC5jb20iLCJleHAiOjE2MzE3NDk3NzIsImlhdCI6MTYzMTcxMzc3Mn0.EKsz64SHJcv9IHLykfW7cB0S9J-5wImcnq4xmsBhKV0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/genero/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"genero",
+								"4"
+							]
+						},
+						"description": "Servicio para eliminar un genero"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "Registrar Usuario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGJhcmV6bHVjYXM5OUBnbWFpbC5jb20iLCJleHAiOjE2MzE3NDk3NzIsImlhdCI6MTYzMTcxMzc3Mn0.EKsz64SHJcv9IHLykfW7cB0S9J-5wImcnq4xmsBhKV0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mail\":\"ejemplo@gmail.com\",\r\n    \"contraseña\":\"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/auth/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"register"
+							]
+						},
+						"description": "Servicio para registrar un nuevo usuario"
+					},
+					"response": []
+				},
+				{
+					"name": "Login Usuario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGJhcmV6bHVjYXM5OUBnbWFpbC5jb20iLCJleHAiOjE2MzE3NDk3NzIsImlhdCI6MTYzMTcxMzc3Mn0.EKsz64SHJcv9IHLykfW7cB0S9J-5wImcnq4xmsBhKV0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mail\":\"ejemplo@gmail.com\",\r\n    \"contraseña\":\"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"login"
+							]
+						},
+						"description": "Servicio de Login para el usuario"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
